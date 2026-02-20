@@ -1,4 +1,44 @@
-# API Reference & Examples
+# API Reference
+
+Base URL: `http://localhost:8000/api/v1`
+
+## Auth
+- POST `/auth/register`
+- POST `/auth/login`
+- GET `/auth/me`
+
+### Register (example)
+```bash
+curl -X POST "http://localhost:8000/api/v1/auth/register" \
+  -H "Content-Type: application/json" \
+  -d '{"email":"user@example.com","username":"user1","full_name":"User One","password":"SecurePass123"}'
+```
+
+### Login (example)
+```bash
+curl -X POST "http://localhost:8000/api/v1/auth/login" \
+  -H "Content-Type: application/json" \
+  -d '{"email":"user@example.com","password":"SecurePass123"}'
+```
+
+## Tasks (JWT required)
+- GET `/tasks`
+- POST `/tasks`
+- GET `/tasks/{id}`
+- PUT `/tasks/{id}`
+- DELETE `/tasks/{id}`
+
+### Create Task (example)
+```bash
+curl -X POST "http://localhost:8000/api/v1/tasks" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <token>" \
+  -d '{"title":"My Task","description":"Example","priority":"high"}'
+```
+
+## Health
+- GET `/`
+- GET `/health`# API Reference & Examples
 
 ## Authentication Endpoints
 

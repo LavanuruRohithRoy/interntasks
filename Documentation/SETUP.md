@@ -1,4 +1,40 @@
-# SETUP & RUNNING GUIDE
+# Setup
+
+## Docker (Recommended)
+```bash
+cd interntask
+docker-compose up --build
+```
+
+## Manual
+
+### Backend
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## Environment Variables
+Backend (.env or environment):
+```
+DATABASE_URL=postgresql://taskuser:taskpass@postgres:5432/taskdb
+SECRET_KEY=your-secret-key-change-in-production
+```
+
+Frontend (.env or environment):
+```
+REACT_APP_API_URL=http://localhost:8000/api/v1
+```# SETUP & RUNNING GUIDE
 
 ## Prerequisites Installation
 

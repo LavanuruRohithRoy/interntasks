@@ -1,4 +1,45 @@
-# Task Management API - Scalable REST API with Auth & RBAC
+# Task Management API
+
+Production-ready FastAPI backend with JWT auth + RBAC and a React frontend for task management.
+
+## What You Get
+- JWT auth (register, login)
+- Role-based access (user/admin roles)
+- Task CRUD with ownership rules
+- PostgreSQL + SQLAlchemy ORM
+- React UI with login, register, dashboard
+- Docker Compose for full stack
+
+## Quick Start (Docker)
+```bash
+cd interntask
+docker-compose up --build
+```
+
+## URLs
+- Frontend: http://localhost:3000
+- API: http://localhost:8000
+- API Docs: http://localhost:8000/docs
+
+## Project Structure (High Level)
+```
+interntask/
+├── backend/   # FastAPI app
+├── frontend/  # React app
+├── docker-compose.yml
+└── Documentation/
+```
+
+## Environment
+Backend uses:
+- DATABASE_URL
+- SECRET_KEY
+
+Frontend uses:
+- REACT_APP_API_URL
+
+See [Documentation/SETUP.md](Documentation/SETUP.md) for details.
+See [Documentation/API_REFERENCE.md](Documentation/API_REFERENCE.md) for endpoints.# Task Management API - Scalable REST API with Auth & RBAC
 
 A production-ready, scalable REST API built with Python FastAPI featuring JWT authentication, role-based access control (RBAC), and a modern React frontend for task management.
 
